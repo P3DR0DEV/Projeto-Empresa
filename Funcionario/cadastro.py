@@ -1,3 +1,4 @@
+from random import randint
 def leiaint(msg):
     while True:
         try:
@@ -8,16 +9,28 @@ def leiaint(msg):
             return n
 
 
-funcionarios = []
-
 
 class Funcionario:
+
+    funcionarios = {}
+
+    @staticmethod
+    def generate_id():
+        pass
+
     def __init__(self, nome, cpf, senha, salario) -> None:
         self._nome = nome
         self._cpf = cpf
         self._senha = senha
         self._salario = salario
-        funcionarios.append(self._nome,self._cpf, self._salario)
+        #self._id 
+        Funcionario.funcionarios['Nome'] = self._nome
+        Funcionario.funcionarios['CPF'] = self._cpf
+        Funcionario.funcionarios['Salario'] = self._salario
+        
+
+    def show_funcionarios(cls):
+        return cls.funcionarios
 
 
     def set_cpf(self, cpf=''):

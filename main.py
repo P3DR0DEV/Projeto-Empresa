@@ -1,6 +1,6 @@
 from Funcionario.cadastro import Funcionario
 
-
+Cliente = Funcionario("Pedro", '00000001', 123, 1000)
 menu= Funcionario.menu("Login","Criar Conta", 'Sair')
 while True:
     

@@ -13,3 +13,9 @@ Para entrar e receber todos esses dadaos, a pessoa tem que estar cadastrada no s
 - Funcionário comum:
 O programa deve gerar um arquivo .TXT com o nome de (id do empregado).txt e ele não deve ter acesso aos outros documentos dos outros funcionários.
 Gerando: {%ID, %Nome, %CPF, %Salário}
+
+
+<h3 align="center">Diagrama de funcionamento</h3>
+
+
+![Diagrama](https://user-images.githubusercontent.com/98365194/170569955-28312faa-b62d-4203-a7d5-bf82476b7750.PNG)

@@ -24,24 +24,19 @@ class Funcionario:
         self._senha = senha
         self._salario = salario
         #self._id 
+        
+
+
+    def cadastra_funcionario(self):
+        self._nome = str(input('Nome: '))
+        self._cpf = str(input('CPF: '))
+        self._senha = str(input('Crie uma senha: '))
+        self._salario = str(input('Salario: '))
         Funcionario.funcionarios['Nome'] = self._nome
         Funcionario.funcionarios['CPF'] = self._cpf
         Funcionario.funcionarios['Salario'] = self._salario
-        
+        return 
 
-    def show_funcionarios(cls):
-        return cls.funcionarios
-
-
-    def set_cpf(self, cpf=''):
-        if cpf.isnumeric():
-            return self._cpf 
-        else:
-            print('Digite um Número de cpf válido.')
-
-
-    def cadastrar_funcionario():
-        pass
 
 
     @staticmethod    
@@ -56,6 +51,11 @@ class Funcionario:
         print('--'*20)
         opc = leiaint('Sua Opção: ')
         return opc
+
+
+    @classmethod
+    def show_funcionarios(cls):
+        print(cls.funcionarios)
 
 class Administrador(Funcionario):
     def __init__(self) -> None:

@@ -9,8 +9,9 @@ def leiaint(msg):
             return n
 
 
-
-class Funcionario:
+show_employes = []
+class Funcionario: 
+    global show_employes
 
     funcionarios = {}
 
@@ -23,18 +24,24 @@ class Funcionario:
         self._cpf = cpf
         self._senha = senha
         self._salario = salario
-        #self._id 
         
 
 
     def cadastra_funcionario(self):
-        self._nome = str(input('Nome: '))
-        self._cpf = str(input('CPF: '))
+        print('--'*20)
+        funcionarios = Funcionario.funcionarios
+
+
+        funcionarios['Nome'] = str(input('Nome: '))
+        funcionarios['CPF'] = str(input('CPF: '))
         self._senha = str(input('Crie uma senha: '))
-        self._salario = str(input('Salario: '))
-        Funcionario.funcionarios['Nome'] = self._nome
-        Funcionario.funcionarios['CPF'] = self._cpf
-        Funcionario.funcionarios['Salario'] = self._salario
+        funcionarios['Salario'] = str(input('Salario: '))
+        self._nome = funcionarios['Nome']  
+        self._cpf = funcionarios['CPF'] 
+        self._salario = funcionarios['Salario']
+
+        values = funcionarios['Nome'], funcionarios['CPF'], funcionarios['Salario']
+        show_employes.append(values)
         return 
 
 
@@ -53,9 +60,9 @@ class Funcionario:
         return opc
 
 
-    @classmethod
-    def show_funcionarios(cls):
-        print(cls.funcionarios)
+    @staticmethod
+    def show_funcionarios():
+        print(show_employes)
 
 class Administrador(Funcionario):
     def __init__(self) -> None:

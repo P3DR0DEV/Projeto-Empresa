@@ -9,7 +9,6 @@ while True:
         Funcionario.cadastra_funcionario(Funcionario)
     elif menu == 3:
         print('\033[31mFechando Programa.\033[m')
-
+        break
     elif menu == 4:
         Funcionario.show_funcionarios()
-        break

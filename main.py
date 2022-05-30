@@ -1,17 +1,17 @@
-from Funcionario.cadastro import Funcionario
+from Funcionario import cadastro
 import os
 from time import sleep
 from Funcionario.login import login
 
 
-
+Funcionario= cadastro.Funcionario
 while True:
     menu= Funcionario.menu("Menu Principal", "Login","Criar Conta", 'Sair')
     if menu == 1: #Logar conta
-        login = str(input('Nome: '))
+        login_nome = str(input('Nome: '))
         login_senha = str(input('Senha: '))
 
-        if login == Funcionario.funcionarios['Nome']:
+        if login_nome == Funcionario.funcionarios['Nome']:
             if Funcionario.funcionarios['Senha'] == login_senha:
                 login(True)
             else:

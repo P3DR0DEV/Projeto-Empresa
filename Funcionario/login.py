@@ -10,13 +10,7 @@ def login(admin = False):
             elif opc == 2:
                 pass
             elif opc == 3:
-                pass
-            elif opc == 4:
                 Funcionario.show_funcionarios()
-            elif opc == 5:
+            elif opc == 4:
                 break
-            
-
-
-
-
+        

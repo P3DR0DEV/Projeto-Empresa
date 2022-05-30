@@ -23,6 +23,7 @@ class Funcionario:
         self._cpf = cpf
         self._senha = senha
         self._salario = salario
+        #self._id = generate_id()
         
 
 

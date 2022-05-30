@@ -1,19 +1,21 @@
 from Funcionario import cadastro
 import os
 from time import sleep
-from Funcionario.login import login
+from auth.enter_login import login
 
 
 Funcionario= cadastro.Funcionario
 while True:
     menu= Funcionario.menu("Menu Principal", "Login","Criar Conta", 'Sair')
     if menu == 1: #Logar conta
-        login_nome = str(input('Nome: '))
+        login_cpf = str(input('CPF: '))
         login_senha = str(input('Senha: '))
 
-        if login_nome == Funcionario.funcionarios['Nome']:
+        if login_cpf == Funcionario.funcionarios['CPF']:
             if Funcionario.funcionarios['Senha'] == login_senha:
+                print('Senha válida')
                 login(True)
+                os.system('cls' if os.name == 'nt' else 'clear')
             else:
                 print('Senha Inválida.')
                 sleep(1)

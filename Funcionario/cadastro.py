@@ -1,4 +1,3 @@
-from random import randint
 def leiaint(msg):
     while True:
         try:
@@ -34,11 +33,12 @@ class Funcionario:
 
         funcionarios['Nome'] = str(input('Nome: '))
         funcionarios['CPF'] = str(input('CPF: '))
-        self._senha = str(input('Crie uma senha: '))
+        funcionarios['Senha'] = str(input('Crie uma senha: '))
         funcionarios['Salario'] = str(input('Salario: '))
         self._nome = funcionarios['Nome']  
         self._cpf = funcionarios['CPF'] 
         self._salario = funcionarios['Salario']
+        self._senha = funcionarios['Senha']
 
         values = funcionarios['Nome'], funcionarios['CPF'], funcionarios['Salario']
         show_employes.append(values)
@@ -47,7 +47,7 @@ class Funcionario:
 
 
     @staticmethod    
-    def menu(*args):
+    def menu(nome , *args):
         print('--'*20)
         print('Menu de Principal'.center(40))
         print('--'*20)
@@ -64,9 +64,5 @@ class Funcionario:
     def show_funcionarios():
         print(show_employes)
 
-class Administrador(Funcionario):
-    def __init__(self) -> None:
-        super().__init__()
-        pass
 
 

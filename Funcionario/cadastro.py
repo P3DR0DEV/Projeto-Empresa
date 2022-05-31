@@ -41,8 +41,10 @@ class Funcionario:
         return
 
     def list_funcionario():
-            Funcionario.add_funcionario.pop('Senha')
-            show_employes.append(Funcionario.add_funcionario)
+            del Funcionario.add_funcionario['Senha']
+            teste = Funcionario.add_funcionario
+            show_employes.append(teste)
+            return
 
 
     @staticmethod    

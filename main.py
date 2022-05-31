@@ -15,11 +15,14 @@ while True:
 
         if login_cpf == Funcionario.add_funcionario['CPF']:
             if Funcionario.add_funcionario['Senha'] == login_senha:
-                admin = str(input('Login como administrador? \n[Y/N] '))
+                
+                admin = str(input('Login como administrador? \n[Y/N] ')) #autenticação perfil admin
+                
                 if admin in 'Yy':
                     senha = str(input('Digite a senha de admin: '))
                     if senha == senha_admin:
                         login(True)
+                        
                 elif admin in 'Nn':
                     login(False)
             else:
@@ -29,7 +32,7 @@ while True:
                 continue
     
     
-    elif menu == 2: #Criar conta a ser definido
+    elif menu == 2: #cria uma nova conta
         Funcionario.cadastra_funcionario(Funcionario)
         sleep(1)
         os.system('cls' if os.name == 'nt' else 'clear')  #clear terminal

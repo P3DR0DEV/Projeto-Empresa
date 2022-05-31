@@ -7,7 +7,6 @@ def leiaint(msg):
         else:
             return n
 
-
 show_employes = []
 class Funcionario: 
     global show_employes
@@ -65,6 +64,13 @@ class Funcionario:
     def show_funcionarios():
         Funcionario.add_funcionarios_lista()
         print(show_employes)
+        
+    def usuario_unico():
+        Funcionario.add_funcionarios_lista()
+        for item in show_employes:
+            if login_cpf == item['cpf']:
+                print(item)
+            
 
 
 

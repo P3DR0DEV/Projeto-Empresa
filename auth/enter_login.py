@@ -10,7 +10,7 @@ def login(admin = False):
         while True:
             opc = Funcionario.menu('Menu de administrador', 'Ver meus dados', 'Dados de um usuário', 'Todos os dados', 'Sair')
             if opc == 1:
-                pass
+                Funcionario.usuario_unico()
             elif opc == 2:
                 pass
             elif opc == 3:

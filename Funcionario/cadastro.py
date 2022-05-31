@@ -1,3 +1,6 @@
+from time import sleep
+
+
 def leiaint(msg):
     while True:
         try:
@@ -6,7 +9,6 @@ def leiaint(msg):
             print('Digite um número válido.')
         else:
             return n
-
 
 show_employes = []
 class Funcionario: 
@@ -63,7 +65,14 @@ class Funcionario:
 
     @staticmethod
     def show_funcionarios():
+        Funcionario.add_funcionarios_lista()
         print(show_employes)
+        
+    def usuario_unico():
+        Funcionario.add_funcionarios_lista()
+        for key in Funcionario.add_funcionarios:
+            print(f'{key} : {Funcionario.add_funcionarios[key]}')
+        sleep(1)
 
 
 

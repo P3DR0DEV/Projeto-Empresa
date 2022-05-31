@@ -3,6 +3,7 @@ import os
 from time import sleep
 from auth.enter_login import login
 
+senha_admin = '123456'
 
 senha_admin = '123456'
 

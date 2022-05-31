@@ -1,5 +1,5 @@
 from Funcionario import cadastro
-from time import sleep
+from time import sleep 
 
 
 Funcionario = cadastro.Funcionario

@@ -12,7 +12,7 @@ show_employes = []
 class Funcionario: 
     global show_employes
 
-    funcionarios = {}
+    add_funcionario = {}
 
     @staticmethod
     def generate_id():
@@ -23,28 +23,26 @@ class Funcionario:
         self._cpf = cpf
         self._senha = senha
         self._salario = salario
-        #self._id = generate_id()
         
 
 
     def cadastra_funcionario(self):
         print('--'*20)
-        funcionarios = Funcionario.funcionarios
+        add_funcionario = Funcionario.add_funcionario
 
+        add_funcionario['Nome'] = str(input('Nome: '))
+        add_funcionario['CPF'] = str(input('CPF: '))
+        add_funcionario['Senha'] = str(input('Crie uma senha: '))
+        add_funcionario['Salario'] = str(input('Salario: '))
+        self._nome = add_funcionario['Nome']  
+        self._cpf = add_funcionario['CPF'] 
+        self._salario = add_funcionario['Salario']
+        self._senha = add_funcionario['Senha']
+        return
 
-        funcionarios['Nome'] = str(input('Nome: '))
-        funcionarios['CPF'] = str(input('CPF: '))
-        funcionarios['Senha'] = str(input('Crie uma senha: '))
-        funcionarios['Salario'] = str(input('Salario: '))
-        self._nome = funcionarios['Nome']  
-        self._cpf = funcionarios['CPF'] 
-        self._salario = funcionarios['Salario']
-        self._senha = funcionarios['Senha']
-
-        values = funcionarios['Nome'], funcionarios['CPF'], funcionarios['Salario']
-        show_employes.append(values)
-        return 
-
+    def list_funcionario():
+            Funcionario.add_funcionario.pop('Senha')
+            show_employes.append(Funcionario.add_funcionario)
 
 
     @staticmethod    

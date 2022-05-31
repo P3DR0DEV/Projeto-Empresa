@@ -1,3 +1,6 @@
+from time import sleep
+
+
 def leiaint(msg):
     while True:
         try:
@@ -39,7 +42,6 @@ class Funcionario:
         self._cpf = add_funcionarios['CPF'] 
         self._salario = add_funcionarios['Salario']
         self._senha = add_funcionarios['Senha']
-
         return 
 
     def add_funcionarios_lista():
@@ -67,10 +69,9 @@ class Funcionario:
         
     def usuario_unico():
         Funcionario.add_funcionarios_lista()
-        for item in show_employes:
-            if login_cpf == item['cpf']:
-                print(item)
-            
+        for key in Funcionario.add_funcionarios:
+            print(f'{key} : {Funcionario.add_funcionarios[key]}')
+        sleep(1)
 
 
 

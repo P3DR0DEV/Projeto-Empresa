@@ -12,7 +12,7 @@ def login(admin = False):
             if opc == 1:
                 Funcionario.usuario_unico()
             elif opc == 2:
-                pass
+                Funcionario.escolha_usuario()
             elif opc == 3:
                 Funcionario.show_funcionarios()
                 sleep(2)

@@ -3,6 +3,7 @@ import os
 from time import sleep
 from auth.enter_login import login
 
+senha_admin = '123456'
 
 Funcionario= cadastro.Funcionario
 while True:
@@ -11,10 +12,15 @@ while True:
         login_cpf = str(input('CPF: '))
         login_senha = str(input('Senha: '))
 
-        if login_cpf == Funcionario.funcionarios['CPF']:
-            if Funcionario.funcionarios['Senha'] == login_senha:
-                print('Senha válida')
-                login(True)
+        if login_cpf == Funcionario.add_funcionarios['CPF']:
+            if Funcionario.add_funcionarios['Senha'] == login_senha:
+                admin = str(input('Deseja fazer login como administrador?\n[Y/N] '))
+                if admin in 'yY':
+                    get_senha = str(input('Senha de administrador: '))
+                    if get_senha == senha_admin:
+                        login(True)
+                elif admin in 'Nn':
+                    login(False)
                 os.system('cls' if os.name == 'nt' else 'clear')
             else:
                 print('Senha Inválida.')

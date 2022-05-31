@@ -12,7 +12,7 @@ show_employes = []
 class Funcionario: 
     global show_employes
 
-    funcionarios = {}
+    add_funcionarios = {}
 
     @staticmethod
     def generate_id():
@@ -29,23 +29,23 @@ class Funcionario:
 
     def cadastra_funcionario(self):
         print('--'*20)
-        funcionarios = Funcionario.funcionarios
+        add_funcionarios = Funcionario.add_funcionarios
 
 
-        funcionarios['Nome'] = str(input('Nome: '))
-        funcionarios['CPF'] = str(input('CPF: '))
-        funcionarios['Senha'] = str(input('Crie uma senha: '))
-        funcionarios['Salario'] = str(input('Salario: '))
-        self._nome = funcionarios['Nome']  
-        self._cpf = funcionarios['CPF'] 
-        self._salario = funcionarios['Salario']
-        self._senha = funcionarios['Senha']
+        add_funcionarios['Nome'] = str(input('Nome: '))
+        add_funcionarios['CPF'] = str(input('CPF: '))
+        add_funcionarios['Senha'] = str(input('Crie uma senha: '))
+        add_funcionarios['Salario'] = str(input('Salario: '))
+        self._nome = add_funcionarios['Nome']  
+        self._cpf = add_funcionarios['CPF'] 
+        self._salario = add_funcionarios['Salario']
+        self._senha = add_funcionarios['Senha']
 
-        values = funcionarios['Nome'], funcionarios['CPF'], funcionarios['Salario']
-        show_employes.append(values)
         return 
 
-
+    def add_funcionarios_lista():
+        del Funcionario.add_funcionarios['Senha']
+        show_employes.append(Funcionario.add_funcionarios)
 
     @staticmethod    
     def menu(nome , *args):
@@ -63,6 +63,7 @@ class Funcionario:
 
     @staticmethod
     def show_funcionarios():
+        Funcionario.add_funcionarios_lista()
         print(show_employes)
 
 
